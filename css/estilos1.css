@@ -5,83 +5,75 @@
     font-family: sans-serif;
 }
 
-/*Parte del Header-Menú*/
-
 header{
-    height: 100px;
+    background-color: white;
+    height: 150px;
     width: 100%;
-    margin-top: 30px;
-    position: fixed;
     z-index: 1;
-    background-color: lightcoral;
+    position: fixed;
+    margin-top: 40px;
 }
-
-.container_logo_menu{
-    max-width: 1200px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.logo_menu{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-/*.logo_menu:hover*/
 
 .logo_menu img{
+    display: flex;
+    margin-left: 30px;
     height: 80px;
 }
 
-.menu{
+.container_logo_menu{
+    max-width: 1250px;
+    height: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
 }
 
- .menu #btn_menu{
-    display: none;
+
+nav{
+    width: 200px;
+    height: 500vh;
+    background-color: #001D7E; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu ul{
-    display: flex;
+    position: fixed;
+    top: 0;
+    margin-top: 70px;
+    
 }
 
 .menu ul li{
     list-style: none;
-    margin-left: 30px;
+    margin-top: 35px;
 }
 
 .menu ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
-    color: black;
-}
-
-
-
-nav a:hover{
     color: white;
 }
 
-nav a:active{
-    color: red;
+.menu ul li a:hover{
+    color: rgb(0, 17, 66); 
+}
+
+.menu ul li a:active{
+    color: black;
+}
+
+#btn_menu{
+    display: none;
 }
 
 #selected{
-    background: #011E7E;
-    padding: 12px 20px;
+    background: #0032d4;
+    padding: 5px 18px;
     border-radius: 50px;
-}
-
-.menu nav img{
-    display: none;
 }
 
 /*Parte del Cover*/
@@ -89,12 +81,12 @@ nav a:active{
 .container_cover{
     width: 100%;
     height: 800px;
-    background-color: lightcyan;
+    background-color: #000000;
 }
 
 .cover{
-    max-width: 1200px;
-    height: 100%;
+    max-width: 700px;
+    height: 80%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -103,6 +95,7 @@ nav a:active{
 
 .container_cover .text{
     max-width: 380px;
+    color: white;
 }
 
 .container_cover .text h1{
@@ -115,51 +108,48 @@ nav a:active{
     margin-top: 40px;
 }
 
-
-
-@media screen and (max-width:1200px){
-    header{
-        padding: 40px;
-    }
-}
-
 @media screen and (max-width: 720px){
-    .menu nav{
+    /*
         position: fixed;
         top: 0;
         right: -250px;
-        background-color: rgb(114, 114, 114);
+        background-color: green;
         width: 250px;
         height: 100vh;
-        padding: 40px;
+        padding: 35px;
+        z-index: 1;
+        transition: all 300ms;
+    */
+    
+    nav{
+        position: fixed;
+        top: 0;
+        left: -250px;
+        background-color: green;
+        width: 250px;
+        height: 100vh;
+        padding: 35px;
         z-index: 1;
         transition: all 300ms;
     }
 
-    .menu ul{
-        flex-direction: column;
-        margin-top: 40px;
+
+    #btn_menu{
+        display: flex;
+        margin-left: 30px;
+        width: 45px;
+        height: 45px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255,255,255,0.2);
+        font-size: 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 300ms;
     }
 
-    .menu ul li{
-        margin-top: 30px;
-        margin-left: 0;
-    }
-
-    .menu ul li a{
-        color: black;
-    }
-    
-    #selected{
-        background: none;
-        padding: 0px;
-        border-radius: none;
-        color: #011E7E;
-    }
-
-    .menu nav img{
-        display: block;
-        height: 70px;
+    #btn_menu:hover{
+        background-color: rgba(255,255,255,0.4);
     }
 
     #back_menu{
@@ -171,21 +161,4 @@ nav a:active{
         background: rgba(0,0,0,0.5);
         display: none;
     }
-
-    .menu #btn_menu{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(255,255,255,0.2);
-        font-size: 25px;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 300ms;
-    }
-
-    .menu #btn_menu:hover{
-        background-color: rgba(255,255,255,0.4);
-    }
-}    
+}
